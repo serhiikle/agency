@@ -1,6 +1,19 @@
 .header {
+  background-color: $colorMainBg;
 
-  &__wrapper {
-    padding: 40px 0;
+  &__top {
+    padding-block: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 10rem;
+  }
+
+  &__menu-list {
+    & > .menu__item {
+      &:last-child {
+        margin-inline-start: 7.5rem;
+      }
+    }
   }
 }

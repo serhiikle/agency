@@ -3,35 +3,18 @@
 .menu {
   &__list {
     display: flex;
-    gap: 20px;
-    text-transform: uppercase;
+    gap: 3rem;
+    color: $colorWhite;
   }
 
-  &__item {
-    position: relative;
+  &__link {
+    border: 1px solid transparent;
+    border-radius: .6rem;
+    padding: 1.2rem 2.5rem;
+    transition: all .4s;
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 3px;
-      // background-color: $btnBgColor;
-      bottom: -4px;
-      transition: width .4s;
-    }
-
-    &::before {
-      left: 0;
-    }
-
-    &::after {
-      right: 0;
-    }
-
-    &:hover::before,
-    &:hover::after {
-      width: 50%;
+    &:hover {
+      border: 1px solid rgba($colorWhite, .3);
     }
   }
 }
