@@ -1,0 +1,171 @@
+//================ MENU =====================
+
+.menu {
+  &__list {
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      // background-color: $btnBgColor;
+      bottom: -4px;
+      transition: width .4s;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      width: 50%;
+    }
+  }
+}
+
+.burger-menu-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 20px;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0;
+  z-index: 5;
+  cursor: pointer;
+  z-index: 9999;
+
+  span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    // background-color: $btnBgColor;
+
+  }
+}
+
+//================ BUTTON =====================
+
+.button {
+  // background-color: $btnBgColor;
+  border: none;
+  padding: 18px 54px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  // color: $btnColor;
+  cursor: pointer;
+  transition: box-shadow .1s, background-color .2s;
+  justify-self: center;
+
+  &:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+    // background-color: $teachColor;
+    // color: $whiteColor;
+  }
+}
+
+//================ FORM =====================
+
+.form {
+  padding: 70px 40px;
+  background-color: #fff;
+  box-shadow: 0px 4px 11px 0px rgba(199, 175, 165, 0.30);
+  margin-top: 110px;
+
+  &__title {
+    font-size: 25px;
+    font-family: "Yeseva One", serif;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__email {
+    margin-bottom: 50px;
+  }
+
+  input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #000;
+    // color: $btnColor;
+    padding: 0 10px;
+    font-size: 16px;
+
+    &::placeholder {
+      // color: $placeholderColor;
+      letter-spacing: 1px;
+    }
+
+    &:focus {
+      // outline: 1px solid rgba($btnBgColor, .3);
+    }
+  }
+}
+
+//================ ACCORDEON =====================
+
+.accordeon {
+  &__item {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__title {
+    padding: 16px 53px 16px 13px;
+    font-size: 16px;
+    font-family: "Yeseva One", serif;
+    background-color: #fff;
+    position: relative;
+    // box-shadow: 0px 4px 11px 0px rgba(199, 175, 165, 0.30);
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/src/arrow-down.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform .3s;
+    }
+  }
+
+  &__text {
+    background-color: #fff;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+  }
+
+  &__list {
+    list-style: decimal;
+    padding: 0 6px 12px 20px;
+  }
+}
+
+.accordeon__title.accordeon__title--active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
