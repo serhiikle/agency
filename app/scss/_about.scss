@@ -1,0 +1,153 @@
+.about {
+  margin-bottom: 14rem;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 47rem;
+    gap: 13rem;
+    margin-block-end: 14rem;
+  }
+
+  &__images { position: relative; }
+
+  &__rect {
+    position: absolute;
+    max-inline-size: 38.4rem;
+    inline-size: 100%;
+    max-block-size: 32rem;
+    block-size: 100%;
+    background-color: $colorBiez;
+    border-radius: $radiusSmall;
+    top: 3%;
+    left: 10%;
+    animation: slideToBottom .8s ease .3s backwards;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: fadeOut 1s ease 2.5s backwards;
+
+  }
+
+  &__card {
+    position: absolute;
+    inline-size: 21.6rem;
+    block-size: 6.8rem;
+    border-radius: $radiusSmall;
+    background-color: $colorWhite;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    top: 9%;
+    right: 10%;
+    animation: slideToLeft .8s ease .3s backwards;
+
+    &-circle-box {
+      display: flex;
+      align-items: center;
+    }
+
+    &-circle {
+      inline-size: 4rem;
+      block-size: 4rem;
+      border: .4rem solid $colorWhite;
+      border-radius: 50%;
+
+      &:not(:first-child) { margin-inline-start: -1.3rem; }
+
+      &.circle--1 { background-color: $colorOrange; animation: slideToLeft .8s ease 1.3s backwards; }
+      &.circle--2 { background-color: $colorPurple; animation: slideToLeft .8s ease 1.5s backwards; }
+      &.circle--3 { background-color: $colorYellow; animation: slideToLeft .8s ease 1.7s backwards; }
+    }
+
+    &-rect {
+      background-color: $colorBiez;
+      border-radius: $radiusSmaller;
+
+      &.rect--1 {
+        inline-size: 6.2rem;
+        block-size: 1.4rem;
+        margin-block-end: 0.8rem;
+        animation: slideToBottom .8s ease 1.9s backwards;
+      }
+
+      &.rect--2 {
+        inline-size: 5.1rem;
+        block-size: .6rem;
+        animation: slideToTop .8s ease 2.1s backwards;
+      }
+    }
+  }
+
+  &__cloud {
+    position: absolute;
+    left: 0;
+    top: 15%;
+    animation: fadeOut 1s ease 2.5s backwards;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 27%;
+    animation: slideToTop .8s ease .3s backwards;
+  }
+
+  &__user {
+    position: absolute;
+    inline-size: 22rem;
+    block-size: 22rem;
+    border-radius: 50%;
+    background-color: $colorOrange;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    animation: slideToRight .8s ease .3s backwards;
+
+    img { animation: fadeIn .8s ease 1s backwards; }
+  }
+
+  &__content {
+    padding: 7rem 0 8rem;
+
+    & > strong { margin-block-end: 1.8rem; animation: fadeIn .8s ease-out 1.3s backwards;}
+  }
+
+  &__subtitle { margin-block-end: 2rem; animation: slideToBottom .8s ease-out 1s backwards;}
+  &__title { margin-block-end: 2.6rem; animation: slideToRight .8s ease-out .2s backwards; }
+  &__text { margin-block-end: 4rem; animation: slideToLeft .8s ease-out .2s backwards; }
+  &__button { animation: slideToTop .8s ease-out 1s backwards; }
+
+  &__advantages {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    border: .1rem solid $colorBorder;
+
+    & > div:not(:last-child) {
+      border-right: .1rem solid $colorBorder;
+    }
+
+    &-experience,
+    &-members,
+    &-projects {
+      padding: 4.5rem 4.8rem 3.8rem;
+    }
+
+    &-value {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-block-end: 1.3rem;
+      line-height: 1.2;
+    }
+    &-description {
+      font-size: 2rem;
+      line-height: 1.6;
+    }
+  }
+}

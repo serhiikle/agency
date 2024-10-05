@@ -8,7 +8,7 @@
   }
 
   &__link {
-    border: 1px solid transparent;
+    border: .1rem solid transparent;
     border-radius: .6rem;
     padding: 1.2rem 2.5rem;
     transition: all .4s;
@@ -50,10 +50,38 @@
   color: $colorOrange;
 }
 
+.title {
+  font-weight: 800;
+  
+  &--main {
+    letter-spacing: -.2rem;
+    font-size: 7.2rem;
+    line-height: 1.11;
+  }
+
+  &--secondary {
+    font-size: 5.6rem;
+    line-height: 1.14;
+    letter-spacing: -.1rem;
+  }
+}
+
+//================ TEXT =====================
+
+.text {
+  color: rgba($colorTextMain, .64);
+
+  &--bold {
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+}
+
 //================ BUTTON =====================
 
 .button {
   padding: 1.8rem 2.3rem;
+  border-radius: $radiusSmall;
   // for tag button
   background-color: transparent;
   border: none;
@@ -65,7 +93,6 @@
     text-transform: uppercase;
     font-size: 1.4rem;
     background-color: $colorOrange;
-    border-radius: $radiusSmall;
     transition: background-color .3s;
 
     &:hover {
@@ -77,6 +104,21 @@
     transition: color .3s;
 
     &:hover {
+      color: $colorOrange;
+    }
+  }
+
+  &--white {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    background-color: $colorWhite;
+    border: .1rem solid transparent;
+    box-shadow: 0 .3rem .9rem 0 rgba($colorTextMain, 0.08);
+    transition: border-color .4s, color .3s;
+
+    &:hover {
+      border-color: $colorOrange;
       color: $colorOrange;
     }
   }

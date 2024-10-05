@@ -31,16 +31,14 @@
 
   &__subtitle {
     margin-block-end: 2.4rem;
+    animation: slideToBottom .6s ease-out .2s backwards;
   }
 
   &__title {
-    font-size: 7.2rem;
-    font-weight: 800;
-    line-height: 1.11;
-    letter-spacing: -.2rem;
     position: relative;
     z-index: 2;
     margin-block-end: 2.4rem;
+    animation: slideToLeft .6s ease-out .2s backwards;
 
     &::after {
       content: "";
@@ -51,22 +49,26 @@
       top: -3rem;
       right: 8.5rem;
       z-index: -1;
+      animation: fadeIn 1s ease-out .6s backwards;
     }
   }
 
   &__text {
     color: rgba($colorWhite, .64);
-    margin-block-end: 3.4rem;
+    margin-block-end: 6.4rem;
+    animation: slideToRight .6s ease-out .2s backwards;
   }
 
   &__buttons {
     margin-block-end: 11.2rem;
+    animation: slideToTop .6s ease-out .2s backwards;
   }
 
   &__blockquote {
     display: flex;
     align-items: center;
     gap: 2.2rem;
+    animation: fadeIn .6s ease-out .2s backwards;
 
     &-photo {
       border-radius: 50%;
@@ -100,6 +102,11 @@
         padding: 2.4rem 0 0 2.1rem;
         top: 0;
         left: 0;
+        animation: slideToBottom .6s ease-out .8s backwards;
+
+        img {
+          animation: fadeIn .6s ease-out 1.4s backwards;
+        }
       }
 
       &.girl {
@@ -107,6 +114,13 @@
         display: flex;
         align-items: end;
         overflow: hidden;
+        right: 0;
+        bottom: 16%;
+        animation: slideToTop .6s ease-out .8s backwards;
+
+        img {
+          animation: fadeIn .6s ease-out 1.4s backwards;
+        }
       }
     }
 
@@ -119,18 +133,31 @@
       block-size: 37rem;
       background-color: $colorDarkerBlue;
       border-radius: 50%;
+      animation: fadeInSize .6s ease-out .2s backwards;
     }
 
     &-spiral {
       position: absolute;
       right: 0;
       top: 17%;
+
+      path {
+        stroke-dashoffset: 1535;
+        stroke-dasharray: 1535;
+        animation: animateSVG 3s ease 1.5s forwards;
+      }
     }
 
     &-curve {
       position: absolute;
       left: 0;
       top: 54%;
+
+      path {
+        stroke-dashoffset: 1535;
+        stroke-dasharray: 1535;
+        animation: animateSVG 3s ease 1.5s forwards;
+      }
     }
 
     &-stars {
@@ -144,6 +171,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      animation: slideToLeft .6s ease-out .8s backwards;
+
+      img {
+        animation: fadeOut .6s ease-out 1.4s backwards;
+      }
     }
 
     &-card {
@@ -157,12 +189,14 @@
       block-size: 11.2rem;
       border-radius: $radiusSmall;
       padding: 1.5rem;
+      animation: slideToRight .6s ease-out .8s backwards;
 
       &--circle {
         inline-size: 4.5rem;
         block-size: 4.5rem;
         border-radius: 50%;
         background-color: $colorOrange;
+        animation: slideToTop .6s ease-out 1.5s backwards;
       }
 
       &--box {
@@ -171,13 +205,50 @@
         gap: 1rem;
       }
 
-      &--line-1 { inline-size: 9.4rem; block-size: 1.4rem; border-radius: $radiusSmaller; background-color: $colorGrey; margin-block-end: .8rem; }
+      &--line-1 {
+        inline-size: 9.4rem;
+        block-size: 1.4rem;
+        border-radius: $radiusSmaller;
+        background-color: $colorGrey;
+        margin-block-end: .8rem;
+        animation: slideToLeft .6s ease-out 1.6s backwards;
+      }
 
-      &--line-2 { inline-size: 7.8rem; block-size: .6rem; border-radius: $radiusSmaller; background-color: $colorGrey; }
+      &--line-2 {
+        inline-size: 7.8rem;
+        block-size: .6rem;
+        border-radius: $radiusSmaller;
+        background-color: $colorGrey;
+        animation: slideToLeft .6s ease-out 1.7s backwards;
+      }
 
-      &--line-3 { inline-size: 9.4rem; block-size: .6rem; border-radius: $radiusSmaller; background-color: $colorGrey; }
+      &--line-3 {
+        inline-size: 9.4rem;
+        block-size: .6rem;
+        border-radius: $radiusSmaller;
+        background-color: $colorGrey;
+        animation: slideToLeft .6s ease-out 1.8s backwards;
+      }
 
-      &--line-4 {inline-size: 6.2rem; block-size: .6rem; border-radius: $radiusSmaller; background-color: $colorGrey;}
+      &--line-4 {
+        inline-size: 6.2rem;
+        block-size: .6rem;
+        border-radius: $radiusSmaller;
+        background-color: $colorGrey;
+        animation: slideToLeft .6s ease-out 1.9s backwards;
+      }
+    }
+
+    &-arrow {
+      position: absolute;
+      bottom: 6%;
+      left: 56%;
+
+      path {
+        stroke-dashoffset: 1535;
+        stroke-dasharray: 1535;
+        animation: animateSVG 3s ease 1.5s forwards;
+      }
     }
   }
 }
