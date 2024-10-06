@@ -42,6 +42,28 @@
   }
 }
 
+@keyframes slideToTopRight {
+  from {
+    transform: translate(-100%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideToBottomLeft {
+  from {
+    transform: translate(100%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
 @keyframes fadeIn {
   from {
     transform: scale(0);
@@ -77,9 +99,40 @@
   }
 }
 
+@keyframes rotateToLeft {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-32deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateToRight {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(21deg);
+    opacity: 1;
+  }
+}
+
 @keyframes animateSVG {
   to {
     stroke-dashoffset: 0;
     stroke-dasharray: 0;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

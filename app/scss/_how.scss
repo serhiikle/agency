@@ -1,0 +1,56 @@
+.how {
+  padding-block-end: 13rem;
+
+  &__wrapper {
+    border-bottom: .1rem solid $colorBorder;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13rem;
+  }
+
+  &__content {
+    animation: slideToRight .8s ease-out .2s backwards;
+  }
+
+  &__subtitle {
+    padding-block-end: 1.7rem;
+  }
+
+  &__title {
+    margin-block-end: 4rem;
+  }
+
+  &__text {
+    margin-block-end: 3rem;
+    color: rgba($colorTextMain, .64);
+  }
+
+  &__list {
+    padding: 6rem 0 11rem;
+    animation: slideToLeft .8s ease-out .2s backwards;
+
+    & > ul > li {
+      counter-increment: number;
+      font-size: 2.4rem;
+      line-height: 1.33;
+      font-weight: 700;
+      padding-inline-start: 10rem;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-block-end: 8rem;
+      }
+
+      &::before {
+        content: counter(number);
+        position: absolute;
+        left: 0;
+        top: -50%;
+        font-size: 7.2rem;
+        font-weight: 800;
+        line-height: 1.11;
+        letter-spacing: -0.2rem;
+      }
+    }
+  }
+}

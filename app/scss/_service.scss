@@ -1,0 +1,151 @@
+.service {
+  margin-block-end: 14rem;
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 47rem;
+    gap: 13rem;
+  }
+
+  &__images { position: relative; }
+
+  &__image-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fadeOut .8s ease-out .2s backwards;
+  }
+
+  &__image-2 {
+    position: absolute;
+    top: 12%;
+    right: 0;
+    animation: fadeIn .8s ease-out 1s backwards;
+    
+  }
+
+  &__abstract-1 {
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    animation: slideToBottom .8s ease-out 1s backwards;
+  }
+
+  &__abstract-2 {
+    position: absolute;
+    right: 0;
+    top: 45%;
+    animation: slideToTopRight .8s ease-out 1s backwards;
+  }
+
+  &__user-1 {
+    background-color: $colorPurple;
+    position: absolute;
+    left: 6%;
+    top: 6%;
+    animation: slideToRight .8s ease-out .2s backwards;
+
+    img {animation: slideToRight .8s ease-out 1.5s backwards;}
+  }
+
+  &__user-2 {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    inline-size: 21.1rem;
+    block-size: 21.1rem;
+    background-color: $colorOrange;
+    animation: fadeIn .8s ease-out .2s backwards;
+
+    img { animation: slideToTop .8s ease-out 1.5s backwards; }
+  }
+
+  &__card {
+    padding: 1.5rem;
+    inline-size: 16.6rem;
+    block-size: 14.2rem;
+    background-color: $colorWhite;
+    border-radius: $radiusSmall;
+    position: absolute;
+    right: 10%;
+    top: 22%;
+    animation: slideToLeft .8s ease-out .2s backwards;
+
+    &-circle {
+      inline-size: 4rem;
+      block-size: 4rem;
+      border-radius: 50%;
+      background-color: $colorBiez;
+      margin-block-end: 2.5rem;
+      animation: slideToBottom .8s ease-out 2s backwards;
+    }
+
+    &-line--1 {
+      inline-size: 7.5rem;
+      block-size: 1.4rem;
+      border-radius: $radiusSmaller;
+      background-color: $colorBiez;
+      margin-block-end: 0.8rem;
+      animation: slideToLeft .8s ease-out 2.2s backwards;
+    }
+
+    &-line--2,
+    &-line--3 {
+      block-size: .6rem;
+      border-radius: $radiusSmaller;
+      background-color: $colorBiez;
+    }
+
+    &-line--2 {
+      inline-size: 12.6rem;
+      margin-block-end: 0.8rem;
+      animation: slideToLeft .8s ease-out 2.4s backwards;
+    }
+
+    &-line--3 {
+      inline-size: 10.5rem;
+      animation: slideToLeft .8s ease-out 2.5s backwards;
+    }
+  }
+
+  &__content { padding: 4rem 0 7.7rem; }
+
+  &__subtitle {
+    margin-block-end: 2rem;
+    animation: slideToBottom .8s ease-out .2s backwards;
+  }
+
+  &__title {
+    margin-block-end: 2.6rem;
+    animation: slideToLeft .8s ease-out .2s backwards;
+  }
+
+  &__text {
+    margin-block-end: 3.9rem;
+  }
+
+  &__blockquote {
+    margin-block-end: 3.6rem;
+    display: flex;
+    gap: 2rem;
+
+    animation: slideToRight .8s ease-out .2s backwards;
+
+    &-user {
+      &--box {
+        inline-size: 6.4rem;
+        block-size: 6.4rem;
+      }
+
+      img { animation: fadeIn .8s ease-out 1s backwards; }
+    }
+
+    &-text {
+      font-size: 1.4rem;
+      line-height: 1.72em;
+      margin-block-end: 1.2rem;
+    }
+  }
+
+  &__button-box { animation: slideToTop .8s ease-out .2s backwards; }
+}

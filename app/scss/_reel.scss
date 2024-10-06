@@ -1,0 +1,18 @@
+.reel {
+  margin-block-end: 23rem;
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 13rem;
+  }
+
+  &__subtitle {
+    margin-block-end: 1.7rem;
+  }
+
+  &__title {
+    margin-block-end: 2.8rem;
+  }
+}
